@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
+
     use HasFactory, Notifiable;
 
     /**
@@ -18,11 +18,15 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'avatar',
     ];
 
+    public function setAvatarAttribute($value)
+    {
+        if (is_file($value)) {
+            $this->attributes['avatar'] = $value->store('avatars', 'public'); // Avatar dosyasını public storage'a kaydet
+        }
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

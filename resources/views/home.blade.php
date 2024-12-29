@@ -26,7 +26,7 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -34,8 +34,17 @@
                             <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
                             <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
                         @else
-                            <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
-                            <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Logout</a></li>
+                            <li class="nav-item">
+                                <a href="{{ route('profile') }}" class="nav-link">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                                <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                            </li>
                         @endguest
                         <li class="nav-item">
                             <a href="/cart" class="nav-link btn btn-outline-light ms-3">
@@ -48,7 +57,9 @@
             </div>
         </nav>
 
-        <!-- Slider -->
+
+
+    <!-- Slider -->
         <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

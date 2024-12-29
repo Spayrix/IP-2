@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
 
         foreach ($categories as $category) {
             // Create 6 products for each category
-            for ($i = 1; $i <= 6; $i++) {
+            for ($i = 1; $i <= 4; $i++) {
                 Product::create([
                     'name' => "{$category->name} Product {$i}",
                     'description' => "{$category->name} description for product {$i}.",
