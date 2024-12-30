@@ -10,9 +10,10 @@ class ProfileController extends Controller
 {
     public function show()
     {
-        // Kullanıcının profilini göstermek
+        // Kullanıcının profilini ve adreslerini al
         $user = Auth::user();
-        $addresses = $user->addresses; // Kullanıcının adreslerini al
+        $addresses = $user->addresses ?: []; // Eğer adres yoksa boş dizi döndür
+
         return view('profile.show', compact('user', 'addresses'));
     }
 
@@ -21,14 +22,15 @@ class ProfileController extends Controller
         // Kullanıcının verilerini güncellemek
         $user = Auth::user();
 
-        $validated = $request->validate([
+        $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'gender' => 'required|in:male,female,other',
-            'age' => 'required|integer|min:18',
             'username' => 'required|string|max:255|unique:users,username,' . $user->id,
-            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
+            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
+            'gender' => 'required|in:male,female,other',
+            'age' => 'nullable|integer|min:18',
             'password' => 'nullable|string|min:8|confirmed',
+            'avatar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
         // Verileri güncelle
@@ -63,4 +65,5 @@ class ProfileController extends Controller
 
         return redirect()->route('profile.show')->with('success', 'Avatar updated successfully!');
     }
+
 }

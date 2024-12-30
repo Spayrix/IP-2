@@ -31,7 +31,7 @@
                         <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
                     @else
                         <li class="nav-item">
-                            <a href="{{ route('profile') }}" class="nav-link">Profile</a>
+                            <a href="{{ route('profile.show') }}" class="nav-link">Profile</a>
                         </li>
                         <li class="nav-item">
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

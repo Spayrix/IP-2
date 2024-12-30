@@ -17,9 +17,12 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
 
         // Kullanıcı ekle
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        User::create([
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'username' => 'johndoe',
+            'email' => 'john@example.com',
+            'password' => bcrypt('password'), // veya Hash::make
         ]);
 
         // Ürünleri ekle

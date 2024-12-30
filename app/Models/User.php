@@ -18,7 +18,15 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar',
+        'first_name',
+        'last_name',
+        'username',
+        'avatar',
+        'email',
+        'password',
+        'gender',
+        'age',
+
     ];
 
     public function setAvatarAttribute($value)

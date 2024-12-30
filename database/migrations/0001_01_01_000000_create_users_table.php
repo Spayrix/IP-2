@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('username')->unique()->nullable();
+            $table->string('avatar')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable();
+            $table->integer('age')->nullable();
+            $table->boolean('newsletter_subscription')->default(false); // Eğer gerekli ise
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
@@ -47,3 +53,4 @@ return new class extends Migration
         Schema::dropIfExists('sessions');
     }
 };
+

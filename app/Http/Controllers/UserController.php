@@ -30,7 +30,7 @@ class UserController extends Controller
         ]);
 
         $user = Auth::user();
-        $user->update($request->only(['gender', 'age', 'newsletter_subscription']));
+        $user->update($request->only(['gender', 'age']));
 
         return back()->with('success', 'Profile updated successfully!');
     }

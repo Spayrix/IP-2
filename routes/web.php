@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
@@ -34,21 +35,22 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-
 // Ürün kaynak rotaları
-Route::resource('products', ProductController::class)->except(['index', 'show']); // Zaten yukarıda tanımlandı.
+Route::resource('products', ProductController::class)->except(['index', 'show']);
 Route::get('products/category/{id}', [ProductController::class, 'category'])->name('products.category');
 
 Route::get('/about', [AboutUsController::class, 'index'])->name('about');
 
-Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
-Route::post('/address/store', [UserController::class, 'storeAddress'])->name('address.store');
-
-
+// Profil rotaları
 Route::middleware(['auth'])->group(function () {
-
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar.update');
     Route::post('/profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('/address/store', [ProfileController::class, 'storeAddress'])->name('address.store');
+});
+
+Route::middleware(['auth'])->group(function() {
+    Route::get('cart', [CartController::class, 'show'])->name('cart.show');
+    Route::post('cart/add/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
+    Route::delete('cart/remove/{productId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
 });
