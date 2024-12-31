@@ -57,9 +57,7 @@
             </div>
         </nav>
 
-
-
-    <!-- Slider -->
+        <!-- Slider -->
         <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -92,7 +90,11 @@
                             <h5 class="card-title">{{ $product->name }}</h5>
                             <p class="card-text">{{ $product->description }}</p>
                             <p class="text-muted">${{ $product->price }}</p>
-                            <a href="#" class="btn btn-primary">View Details</a>
+                            <!-- Add to Cart Button -->
+                            <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>

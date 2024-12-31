@@ -12,7 +12,12 @@
                             <h5 class="card-title">{{ $product->name }}</h5>
                             <p class="card-text">{{ $product->description }}</p>
                             <p class="text-muted">${{ $product->price }}</p>
-                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary">View Details</a>
+
+                            <!-- Sepete Ekle Butonu -->
+                            <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-success">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>

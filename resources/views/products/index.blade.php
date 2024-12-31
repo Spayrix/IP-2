@@ -25,12 +25,17 @@
                         <td>{{ $product->stock }}</td>
                         <td>{{ $product->category->name ?? 'Uncategorized' }}</td>
                         <td>
-                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-info btn-sm">View</a>
                             <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display: inline-block;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+
+                            <!-- Sepete Ekle Butonu -->
+                            <form action="{{ route('cart.add', $product->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn btn-success btn-sm">Add to Cart</button>
                             </form>
                         </td>
                     </tr>

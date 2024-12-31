@@ -12,47 +12,63 @@ class CartController extends Controller
     public function show()
     {
         $user = Auth::user();
-        $cartItems = $user->cartItems; // Kullanıcıya ait sepet ürünlerini al
 
+        // Eğer kullanıcı yoksa, sepeti göstermek mümkün olmaz
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'You need to be logged in to view your cart.');
+        }
+
+        $cartItems = $user->cartItems; // Kullanıcıya ait sepet ürünlerini al
         return view('cart.show', compact('cartItems'));
     }
 
     public function addToCart(Request $request, $productId)
     {
         $user = Auth::user();
-        $product = Product::findOrFail($productId);
 
-        $cartItem = CartItem::where('user_id', $user->id)
-            ->where('product_id', $product->id)
-            ->first();
-
-        if ($cartItem) {
-            // Sepette ürün varsa miktarı artır
-            $cartItem->quantity += 1;
-            $cartItem->save();
-        } else {
-            // Sepette ürün yoksa yeni bir öğe ekle
-            CartItem::create([
-                'user_id' => $user->id,
-                'product_id' => $product->id,
-                'quantity' => 1,
-            ]);
+        // Kullanıcı giriş yapmamışsa yönlendirme
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'You need to be logged in to add items to your cart.');
         }
 
-        return redirect()->route('cart.show');
+        $product = Product::findOrFail($productId);
+
+        // Eğer session'a sepete ürün ekliyorsanız:
+        $cart = session()->get('cart', []);
+
+        if (isset($cart[$product->id])) {
+            // Sepette ürün varsa miktarı artır
+            $cart[$product->id]['quantity']++;
+        } else {
+            // Sepette ürün yoksa yeni ekle
+            $cart[$product->id] = [
+                'name' => $product->name,
+                'quantity' => 1,
+                'price' => $product->price,
+            ];
+        }
+
+        // Sepeti session'a kaydet
+        session()->put('cart', $cart);
+
+        return back()->with('success', 'Product added to cart successfully.');
     }
 
     public function removeFromCart($productId)
     {
         $user = Auth::user();
+
+        // Sepetteki ürünü bul
         $cartItem = CartItem::where('user_id', $user->id)
             ->where('product_id', $productId)
             ->first();
 
         if ($cartItem) {
+            // Ürünü sil
             $cartItem->delete();
+            return redirect()->route('cart.show')->with('success', 'Product removed from cart.');
         }
 
-        return redirect()->route('cart.show');
+        return redirect()->route('cart.show')->with('error', 'Product not found in your cart.');
     }
 }
