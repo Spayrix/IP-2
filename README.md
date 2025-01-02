@@ -41,6 +41,7 @@ php artisan serve
 - Jetbrains : PhpStorm
 - Jetbrains : Datagrip
 
+
 ---------------------------------------------------------------------------------------------------------------------
 ## Target Audience Analysis and Marketing
 
@@ -86,6 +87,21 @@ php artisan serve
 ## Tools Used in the Project
 - JetBrains: PhpStorm
 - JetBrains: DataGrip
+
+##Screenshots 
+
+![Resim1](https://github.com/user-attachments/assets/b9215a55-c73e-4c7e-8449-78a0171ef202)
+![Resim2](https://github.com/user-attachments/assets/33786f77-fd42-4291-8393-0ba1ae3e0863)
+![Resim3](https://github.com/user-attachments/assets/5e23d49d-cf89-42a4-b62c-87e24a5ef714)
+![Resim4](https://github.com/user-attachments/assets/a1abca3d-3d95-4582-b4c3-9fa6751c9fa5)
+![Resim5](https://github.com/user-attachments/assets/1bf377ec-b359-44ea-9256-3f9a36be1c6a)
+![Resim6](https://github.com/user-attachments/assets/0bf2f8e8-807a-496b-a932-7c6ac232759a)
+
+
+
+
+
+
 
  
    
