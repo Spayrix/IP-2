@@ -13,12 +13,12 @@ class CartController extends Controller
     {
         $user = Auth::user();
 
-        // Eğer kullanıcı yoksa, sepeti göstermek mümkün olmaz
+
         if (!$user) {
             return redirect()->route('login')->with('error', 'You need to be logged in to view your cart.');
         }
 
-        $cartItems = $user->cartItems; // Kullanıcıya ait sepet ürünlerini al
+        $cartItems = $user->cartItems;
         return view('cart.show', compact('cartItems'));
     }
 
@@ -26,21 +26,21 @@ class CartController extends Controller
     {
         $user = Auth::user();
 
-        // Kullanıcı giriş yapmamışsa yönlendirme
+
         if (!$user) {
             return redirect()->route('login')->with('error', 'You need to be logged in to add items to your cart.');
         }
 
         $product = Product::findOrFail($productId);
 
-        // Eğer session'a sepete ürün ekliyorsanız:
+
         $cart = session()->get('cart', []);
 
         if (isset($cart[$product->id])) {
-            // Sepette ürün varsa miktarı artır
+
             $cart[$product->id]['quantity']++;
         } else {
-            // Sepette ürün yoksa yeni ekle
+
             $cart[$product->id] = [
                 'name' => $product->name,
                 'quantity' => 1,
@@ -48,7 +48,7 @@ class CartController extends Controller
             ];
         }
 
-        // Sepeti session'a kaydet
+
         session()->put('cart', $cart);
 
         return back()->with('success', 'Product added to cart successfully.');
@@ -58,13 +58,13 @@ class CartController extends Controller
     {
         $user = Auth::user();
 
-        // Sepetteki ürünü bul
+
         $cartItem = CartItem::where('user_id', $user->id)
             ->where('product_id', $productId)
             ->first();
 
         if ($cartItem) {
-            // Ürünü sil
+
             $cartItem->delete();
             return redirect()->route('cart.show')->with('success', 'Product removed from cart.');
         }

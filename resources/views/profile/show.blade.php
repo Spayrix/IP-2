@@ -3,11 +3,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <!-- Left Column: Profile (First Name, Last Name, Gender, Age) -->
+
             <div class="col-md-4">
                 <h1>Profile</h1>
 
-                <!-- Avatar Upload -->
+
                 <div class="text-center mb-4">
                     <img src="{{ $user->avatar ? asset('storage/' . $user->avatar) : asset('images/default-avatar.png') }}" alt="Avatar" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
                     <form action="{{ route('profile.avatar.update') }}" method="POST" enctype="multipart/form-data" class="mt-2">
@@ -17,7 +17,7 @@
                     </form>
                 </div>
 
-                <!-- Profile Info: First Name, Last Name, Gender, Age -->
+
                 <form action="{{ route('profile.update') }}" method="POST">
                     @csrf
                     <div class="row">

@@ -10,9 +10,9 @@ class CreateCartItemsTable extends Migration
     {
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Sepet kullanıcıya ait olacak
-            $table->foreignId('product_id')->constrained()->onDelete('cascade'); // Ürün ID'si
-            $table->integer('quantity')->default(1); // Ürün miktarı
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->integer('quantity')->default(1);
             $table->timestamps();
         });
     }

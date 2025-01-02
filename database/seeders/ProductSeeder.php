@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
         $categories = Category::all();
 
         foreach ($categories as $category) {
-            // Create 6 products for each category
+
             for ($i = 1; $i <= 4; $i++) {
                 Product::create([
                     'name' => "{$category->name} Product {$i}",

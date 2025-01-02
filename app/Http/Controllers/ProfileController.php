@@ -19,7 +19,7 @@ class ProfileController extends Controller
 
     public function updateProfile(Request $request)
     {
-        // Kullanıcının verilerini güncellemek
+
         $user = Auth::user();
 
         $request->validate([
@@ -33,7 +33,7 @@ class ProfileController extends Controller
             'avatar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        // Verileri güncelle
+
         $user->first_name = $validated['first_name'];
         $user->last_name = $validated['last_name'];
         $user->gender = $validated['gender'];
@@ -41,7 +41,7 @@ class ProfileController extends Controller
         $user->username = $validated['username'];
         $user->email = $validated['email'];
 
-        // Şifre değişikliği varsa
+
         if ($request->password) {
             $user->password = bcrypt($request->password);
         }
@@ -53,7 +53,7 @@ class ProfileController extends Controller
 
     public function updateAvatar(Request $request)
     {
-        // Avatar güncelleme işlemi
+
         $request->validate([
             'avatar' => 'required|image|mimes:jpg,png,jpeg|max:2048',
         ]);

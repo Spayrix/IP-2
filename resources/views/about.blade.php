@@ -7,7 +7,7 @@
                 <h1 class="text-center mb-4">About Us</h1>
                 <p class="text-center text-muted">Learn more about our story, mission, and values.</p>
 
-                <!-- Company Story -->
+
                 <div class="mb-5">
                     <h3>Our Story</h3>
                     <p>
@@ -17,7 +17,7 @@
                     </p>
                 </div>
 
-                <!-- Mission and Vision -->
+
                 <div class="mb-5">
                     <h3>Our Mission</h3>
                     <p>
@@ -30,7 +30,7 @@
                     </p>
                 </div>
 
-                <!-- Values -->
+
                 <div class="mb-5">
                     <h3>Our Values</h3>
                     <ul class="list-group">
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
 
-                <!-- Team Section -->
+
                 <div class="mb-5">
                     <h3>Meet Our Team</h3>
                     <p>
@@ -50,7 +50,7 @@
                     </p>
                 </div>
 
-                <!-- Social Responsibility -->
+
                 <div class="mb-5">
                     <h3>Social Responsibility</h3>
                     <p>
@@ -60,7 +60,7 @@
                     </p>
                 </div>
 
-                <!-- Contact Section -->
+
                 <div class="text-center">
                     <h3>Contact Us</h3>
                     <p>

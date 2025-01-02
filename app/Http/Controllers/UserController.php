@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    // Kullanıcı profili sayfası
+
     public function profile()
     {
         $user = Auth::user();
@@ -21,7 +21,7 @@ class UserController extends Controller
         return view('profile', compact('user', 'addresses', 'favorites', 'coupons'));
     }
 
-    // Profil güncelleme
+
     public function updateProfile(Request $request)
     {
         $request->validate([
@@ -35,7 +35,7 @@ class UserController extends Controller
         return back()->with('success', 'Profile updated successfully!');
     }
 
-    // Yeni adres ekleme
+
     public function storeAddress(Request $request)
     {
         $request->validate([

@@ -9,14 +9,14 @@ class ContactController extends Controller
 {
     public function submit(Request $request)
     {
-        // Formdan gelen verileri doğrula
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
 
-        // Veritabanına kaydet
+
         Contact::create([
             'name' => $validated['name'],
             'email' => $validated['email'],

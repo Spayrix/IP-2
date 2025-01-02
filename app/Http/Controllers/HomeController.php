@@ -11,10 +11,10 @@ class HomeController extends Controller
 
     public function index()
     {
-        // Ürünleri al
-        $products = Product::all(); // Ya da belirli bir sorgu kullanabilirsiniz
 
-        // View'e ürünleri gönder
+        $products = Product::all();
+
+
         return view('home', compact('products'));
     }
 }

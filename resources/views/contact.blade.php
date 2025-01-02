@@ -5,7 +5,7 @@
         <h1 class="my-4 text-center">Contact Us</h1>
 
         <div class="row">
-            <!-- Contact Form -->
+
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <!-- Contact Information -->
+
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">

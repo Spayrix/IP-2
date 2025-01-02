@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Kategorileri ekle
+
         $this->call(CategorySeeder::class);
 
-        // Kullanıcı ekle
+
         User::create([
             'first_name' => 'John',
             'last_name' => 'Doe',
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'), // veya Hash::make
         ]);
 
-        // Ürünleri ekle
+
         $this->call(ProductSeeder::class);
     }
 }

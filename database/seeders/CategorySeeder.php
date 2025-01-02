@@ -9,7 +9,7 @@ class CategorySeeder extends Seeder
 {
     public function run(): void
     {
-        // Create categories directly
+
         Category::create([
             'name' => 'Clothing',
             'description' => 'Men and women clothing.'

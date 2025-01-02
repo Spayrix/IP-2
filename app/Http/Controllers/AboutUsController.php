@@ -9,7 +9,7 @@ class AboutUsController extends Controller
 {
     public function index()
     {
-        $aboutUs = AboutUs::first(); // İlk AboutUs kaydını getir
+        $aboutUs = AboutUs::first();
         return view('about', compact('aboutUs'));
     }
 }

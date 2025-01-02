@@ -18,7 +18,7 @@ class Address extends Model
         'postal_code',
     ];
 
-    // Kullanıcıyla ilişki
+
     public function user()
     {
         return $this->belongsTo(User::class);

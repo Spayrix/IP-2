@@ -13,7 +13,7 @@ class CartItem extends Model
         'user_id', 'product_id', 'quantity'
     ];
 
-    // Kullanıcı ilişkisi
+
     public function user()
     {
         return $this->belongsTo(User::class);

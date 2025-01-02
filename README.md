@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Hedef Kitle Analizi Ve Pazarlama
 
-## About Laravel
+Laravel ve Mysql kullanılarak geliştirdiğim bir hedef kitle analizi ve pazarlama projesidir.(Proje yarım kalmıştır)
+Bu proje farklı ürünlere ilgi duyan hedef kitlenin analiz edildiği ve ona göre kullanıcıya ürünün pazarlandığı, kupon bilgilerinin bildirim olarak gönderildiği bir satış sistemidir.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Profil Bilgileri bulunur.
+- Kullanıcı girdiği bilgilere göre (yaş,cinsiyet,vs.) ürünü pazarlamayı hedefler.
+- Kullanıcı aldığı ürünün(ör : parfüm) kullanım süresinin geçmesi üzerine, kullanıcıya kupon veya bildirim gönderir.
+- Sepete eklenen ürünün alınmaması fakat sepette durması üzerine kulllanıcıya bildirim gönderir.
+- Bu proje hem hedef kitleyi hem de satıcıyı memnun etmek üzerine kurulmuş ; bu sebeple kullanıcıların siteye ilgi duyması sağlanmaya çalışılmış satıcının da daha fazla ürün satması amaçlanmıştır.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Projede Kullanılan Gereksinimler:
+- Composer version 2.7.9
+- PHP 8.2.4
+- PHP tabanlı web projeleri geliştirmek için yaygın olarak kullanılan bir yerel sunucu çözümü. (Xampp veya tercihen başka bir uygulama)
 
-## Learning Laravel
+## Kurulum
+1. Cmd'den kurmak istediğiniz klasör yolunu belirtip depoyu klonlayın 
+git clone https://github.com/Spayrix/ip-2.git
+2. .env dosyanızı ayarlayın
+3. Gerekli paketleri yükleyin
+composer install
+npm install
+4. Projede kullanılacak benzersiz anahtarınızı üretin
+php artisan key:generate
+5. Proje için gerekli paketleri çalıştırın
+npm run dev
+6. Sanal sunucunuzu yarattıktan sonra şu kodu konsolunuzda şu kodu yazın
+php artisan serve
+7. Daha sonra açılan server http kodunuza tıklayıp tarayıcınızdan siteyi açın.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Projede Kullanılan teknolojiler (Kullanılan diller, kütüphaneler ve araçlar.)
+- Node.js
+- Php laravel
+- MySQL
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Projede kullandığım uygulamalar
+- Jetbrains : PhpStorm
+- Jetbrains : Datagrip
 
-## Laravel Sponsors
+---------------------------------------------------------------------------------------------------------------------
+## Target Audience Analysis and Marketing
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+This is a target audience analysis and marketing project developed using Laravel and MySQL. *(The project is incomplete)*  
+The project analyzes the target audience interested in different products and markets products to users accordingly, while sending coupon information as notifications in a sales system.
 
-### Premium Partners
+### Features
+- Includes profile information.
+- Targets marketing based on user-provided information (e.g., age, gender, etc.).
+- Sends coupons or notifications to users when the usage period of a purchased product (e.g., perfume) expires.
+- Sends notifications to users if a product is left in the cart without being purchased.
+- The project aims to satisfy both the target audience and sellers. It is designed to attract users to the platform while helping sellers increase their sales.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## Project Requirements:
+- Composer version 2.7.9
+- PHP 8.2.4
+- A local server solution widely used for PHP-based web projects (XAMPP or another preferred application).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## Installation
+1. Specify the folder path where you want to install the project using the command line and clone the repository:
+   git clone https://github.com/Spayrix/ip-2.git
+2. Set up your .env file.
+3. Install the required dependencies
+composer install  
+npm install
+4. Generate a unique application key
+php artisan key:generate
+5. Run the necessary packages for the project
+npm run dev
+6. After creating the virtual server, start the application with the following command
+php artisan serve
+7. Open the generated server HTTP link in your browser to access the site
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Technologies Used (Languages, Libraries, and Tools)
+- Node.js
+- PHP Laravel
+- MySQL
 
-## Security Vulnerabilities
+## Tools Used in the Project
+- JetBrains: PhpStorm
+- JetBrains: DataGrip
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+ 
+   
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

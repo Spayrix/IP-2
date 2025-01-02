@@ -61,13 +61,13 @@
         <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 1">
+                    <img src="https://img.pikbest.com/origin/09/30/65/27hpIkbEsTzdI.jpg!sw800" class="d-block w-100" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 2">
+                    <img src="https://s3images.coroflot.com/user_files/individual_files/large_653993_nrkwq36bondpxv4z_oy_lpdso.jpg" class="d-block w-100" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 3">
+                    <img src="https://cdn.vectorstock.com/i/500p/97/69/playful-pet-shop-banner-vector-53919769.jpg" class="d-block w-100" alt="Slide 3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
