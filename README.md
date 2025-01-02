@@ -88,7 +88,7 @@ php artisan serve
 - JetBrains: PhpStorm
 - JetBrains: DataGrip
 
-##Screenshots 
+## Screenshots 
 
 ![Resim1](https://github.com/user-attachments/assets/b9215a55-c73e-4c7e-8449-78a0171ef202)
 ![Resim2](https://github.com/user-attachments/assets/33786f77-fd42-4291-8393-0ba1ae3e0863)
