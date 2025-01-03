@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/88819250-9f20-4f51-8573-df8da3e6a338)
 ## Hedef Kitle Analizi Ve Pazarlama
 
 Laravel ve Mysql kullanılarak geliştirdiğim bir hedef kitle analizi ve pazarlama projesidir.(Proje yarım kalmıştır)
@@ -17,19 +17,22 @@ Bu proje farklı ürünlere ilgi duyan hedef kitlenin analiz edildiği ve ona g�
 - PHP tabanlı web projeleri geliştirmek için yaygın olarak kullanılan bir yerel sunucu çözümü. (Xampp veya tercihen başka bir uygulama)
 
 ## Kurulum
-1. Cmd'den kurmak istediğiniz klasör yolunu belirtip depoyu klonlayın 
+1. Cmd'den kurmak istediğiniz klasör yolunu belirtip depoyu klonlayın
+```
 git clone https://github.com/Spayrix/ip-2.git
-2. .env dosyanızı ayarlayın
-3. Gerekli paketleri yükleyin
-composer install
+```
+3. .env dosyanızı ayarlayın
+4. Gerekli paketleri yükleyin
+```composer install
 npm install
-4. Projede kullanılacak benzersiz anahtarınızı üretin
-php artisan key:generate
-5. Proje için gerekli paketleri çalıştırın
-npm run dev
-6. Sanal sunucunuzu yarattıktan sonra şu kodu konsolunuzda şu kodu yazın
-php artisan serve
-7. Daha sonra açılan server http kodunuza tıklayıp tarayıcınızdan siteyi açın.
+```
+5. Projede kullanılacak benzersiz anahtarınızı üretin
+```php artisan key:generate```
+6. Proje için gerekli paketleri çalıştırın
+```npm run dev```
+7. Sanal sunucunuzu yarattıktan sonra şu kodu konsolunuzda şu kodu yazın
+```php artisan serve```
+8. Daha sonra açılan server http kodunuza tıklayıp tarayıcınızdan siteyi açın.
 
 ### Projede Kullanılan teknolojiler (Kullanılan diller, kütüphaneler ve araçlar.)
 - Node.js
@@ -66,17 +69,18 @@ The project analyzes the target audience interested in different products and ma
 
 ## Installation
 1. Specify the folder path where you want to install the project using the command line and clone the repository:
-   git clone https://github.com/Spayrix/ip-2.git
+  ``` git clone https://github.com/Spayrix/ip-2.git```
 2. Set up your .env file.
 3. Install the required dependencies
-composer install  
+```composer install  
 npm install
+```
 4. Generate a unique application key
-php artisan key:generate
+```php artisan key:generate```
 5. Run the necessary packages for the project
-npm run dev
+```npm run dev```
 6. After creating the virtual server, start the application with the following command
-php artisan serve
+```php artisan serve```
 7. Open the generated server HTTP link in your browser to access the site
 
 ## Technologies Used (Languages, Libraries, and Tools)
