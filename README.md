@@ -23,15 +23,20 @@ git clone https://github.com/Spayrix/ip-2.git
 ```
 3. .env dosyanızı ayarlayın
 4. Gerekli paketleri yükleyin
-```composer install
+```
+composer install
 npm install
 ```
 5. Projede kullanılacak benzersiz anahtarınızı üretin
-```php artisan key:generate```
+```
+php artisan key:generate
+```
 6. Proje için gerekli paketleri çalıştırın
 ```npm run dev```
 7. Sanal sunucunuzu yarattıktan sonra şu kodu konsolunuzda şu kodu yazın
-```php artisan serve```
+```
+php artisan serve
+```
 8. Daha sonra açılan server http kodunuza tıklayıp tarayıcınızdan siteyi açın.
 
 ### Projede Kullanılan teknolojiler (Kullanılan diller, kütüphaneler ve araçlar.)
@@ -69,18 +74,27 @@ The project analyzes the target audience interested in different products and ma
 
 ## Installation
 1. Specify the folder path where you want to install the project using the command line and clone the repository:
-  ``` git clone https://github.com/Spayrix/ip-2.git```
+  ```
+git clone https://github.com/Spayrix/ip-2.git
+```
 2. Set up your .env file.
 3. Install the required dependencies
-```composer install  
+```
+composer install  
 npm install
 ```
 4. Generate a unique application key
-```php artisan key:generate```
+```
+php artisan key:generate
+```
 5. Run the necessary packages for the project
-```npm run dev```
+```
+npm run dev
+```
 6. After creating the virtual server, start the application with the following command
-```php artisan serve```
+```
+php artisan serve
+```
 7. Open the generated server HTTP link in your browser to access the site
 
 ## Technologies Used (Languages, Libraries, and Tools)
