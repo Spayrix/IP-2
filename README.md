@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/88819250-9f20-4f51-8573-df8da3e6a338)
+
 ## Hedef Kitle Analizi Ve Pazarlama
 
 Laravel ve Mysql kullanılarak geliştirdiğim bir hedef kitle analizi ve pazarlama projesidir.(Proje yarım kalmıştır)
