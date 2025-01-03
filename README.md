@@ -47,7 +47,7 @@ php artisan serve
 - MySQL
 
 
-## Projede kullandığım uygulamalar
+## Projede kullandığım IDE'ler
 - Jetbrains : PhpStorm
 - Jetbrains : Datagrip
 
@@ -104,7 +104,7 @@ php artisan serve
 - PHP Laravel
 - MySQL
 
-## Tools Used in the Project
+## IDEs Used in the Project
 - JetBrains: PhpStorm
 - JetBrains: DataGrip
 
