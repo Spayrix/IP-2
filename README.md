@@ -32,8 +32,10 @@ npm install
 php artisan key:generate
 ```
 6. Proje için gerekli paketleri çalıştırın
-```npm run dev```
-7. Sanal sunucunuzu yarattıktan sonra şu kodu konsolunuzda şu kodu yazın
+```
+npm run dev
+```
+8. Sanal sunucunuzu yarattıktan sonra aşağıdaki kodu konsolunuzda yazın
 ```
 php artisan serve
 ```
